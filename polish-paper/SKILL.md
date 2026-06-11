@@ -1,9 +1,9 @@
 ---
 name: polish-paper
 description: |
-  IEEE Transaction 论文交互式润色 Skill。
-  支持多段逻辑整理 + 逐段润色 + 自动 humanizer 去 AI 感。
-  每步交互需用户确认后推进。
+  IEEE Transaction 英文学术论文交互式润色 Skill。
+  支持多段逻辑整理、逐段润色、去除 AI 写作痕迹。
+  仅用于英文学术论文（LaTeX 或普通文本），每步交互需用户确认后推进。
 ---
 
 # Polish Paper: IEEE Transaction 论文润色
@@ -58,15 +58,15 @@ description: |
 
 ---
 
-### Phase 2: 逐段润色 + Humanizer
+### Phase 2: 逐段润色 + 去 AI 感
 
 按段落顺序逐段处理。每段执行：
 
 #### Step 2a: 学术润色
 使用「润色 Prompt」处理当前段落。
 
-#### Step 2b: Humanizer 去 AI 感
-将润色结果通过 humanizer 规则处理，去除机械化和模板化痕迹。
+#### Step 2b: 去 AI 感处理
+将润色结果通过去 AI 感规则处理，去除机械化和模板化痕迹。
 
 **每段输出**：
 1. **最终文本**（经过 Step 2a + Step 2b 的结果）
@@ -104,7 +104,7 @@ description: |
 
 处理分为两步，请依次执行：
 - Step 1 (学术润色): 修正语法错误、优化句式结构、提升学术严谨性与逻辑连贯性。
-- Step 2 (Humanizer 去 AI 感): 应用 humanizer 规则，去除机械连接词和模板化表达，使行文更接近人类研究者的自然学术写作风格。
+- Step 2 (去 AI 感处理): 应用去 AI 感规则，去除机械连接词和模板化表达，使行文更接近人类研究者的自然学术写作风格。
 
 注意：这是一篇即将投稿到 IEEE Transaction 的论文。
 
@@ -122,14 +122,41 @@ description: |
    - 词汇选择：拒绝堆砌华丽辞藻或生僻词汇。仅使用科研领域通用、易理解的词汇（Simple & Clear），确保文本清晰、简洁。
    - 所有格与结构：避免使用名词所有格形式（尤其是方法名、模型名或系统名 + 's）。应优先采用 of 结构、名词修饰结构或被动表达。
 
-## Step 2: Humanizer 去 AI 感规则
-3. 去 AI 感处理（每次润色后必须执行）：
-   - 禁用机械连接词：删除或替换 First and foremost, It is worth noting that, In conclusion, Lastly, Interestingly 等模板化过渡词。句子间应通过自然的逻辑递进衔接。
-   - 句式长度变化：避免所有句子长度一致，长短句交替使用。
-   - 被动语态控制：学术写作允许被动语态，但避免连续多个句子使用被动语态导致生硬。
-   - 具体性检查：拒绝空洞概括（如 significant improvement without specifics），保持精准表达。
-   - 禁止强调格式：正文中严禁使用加粗、斜体、emoji、下划线等。
-   - 避免修饰语堆叠：减少连续从句和嵌套结构，必要时拆分为清晰短句。
+## Step 2: 去 AI 感规则
+3. 去 AI 感处理（每次润色后必须执行）。
+
+   **详细规则请读取并遵循 `references/de-ai-rules.md`。** 核心检查要点如下：
+
+   **必须删除的词与短语：**
+   - 机械连接词：First and foremost, It is worth noting that, In conclusion, Lastly, Interestingly, Let's dive in
+   - AI 高频词（避免堆砌）：additionally, crucial, delve, enhance, fostering, highlight, intricate, landscape, pivotal, showcase, tapestry, testament, underscore, vibrant
+   - 意义夸大：stands as, serves as a testament, marking a pivotal moment, underscores its importance
+   - 模糊归因：Experts argue, Industry reports, Some critics believe（必须引用具体文献 \cite{} 或删除）
+   - 宣传语言：groundbreaking, stunning, breathtaking, vibrant（比喻义）
+   - 空洞结论：The future looks bright, Exciting times lie ahead
+   - 填充短语：In order to → To, Due to the fact that → Because, It is important to note that → 直接陈述
+
+   **必须修正的修辞问题：**
+   - 系动词回避（serves as/stands as → is/are/has）
+   - -ing 堆砌（highlighting, underscoring, symbolizing...）
+   - 规则三项（强行凑成三点）
+   - 同义词轮换（相邻句换词指同一概念）
+   - 戏剧性短句堆砌（连续多个短句制造高潮）
+   - 格言公式（"X is the Y of Z" → 具体陈述）
+
+   **句式与节奏控制：**
+   - 句式长度变化，避免所有句子一样长
+   - 被动语态允许使用，但避免连续三个以上
+   - 禁止破折号滥用，用逗号或从句替代
+   - 禁止强调格式（加粗/斜体/emoji）
+
+   **逻辑保持（底线原则）：**
+   - 去 AI 感处理**不能破坏句子原本的逻辑性**。删除连接词或改写句式时，必须确保因果、递进、转折等逻辑关系仍然清晰。如果某个连接词承担了不可替代的逻辑功能，保留它或改用更自然的表达方式，而非直接删除。
+
+   **学术豁免（不要修改这些）：**
+   - 被动语态、适度 hedging（may/could/might）、key（形容词）
+   - Not only...but also...、系动词 is/are/has
+   - 连字符复合词的 attributive 用法
 
 ## 格式与内容保持规则
 4. 内容与格式保持：
