@@ -7,11 +7,8 @@
 
 ## 3.1 禁用机械连接词与路标词
 
-**必须删除或替换的模板化过渡词：**
+**必须删除或替换的模板化过渡词（不承担真实逻辑功能）：**
 - First and foremost, It is worth noting that, In conclusion, Lastly, Interestingly
-- Furthermore, Moreover, Subsequently
-
-**必须删除的教学式导语：**
 - Let's dive in, here's what you need to know, now let's look at, let's explore
 - Let's break this down, without further ado
 
@@ -19,7 +16,18 @@
 - The real question is, at its core, fundamentally, what really matters
 - The heart of the matter, in reality, the deeper issue
 
-**修正原则：** 句子间应通过自然的逻辑递进衔接，而非依赖上述过渡词。
+**应保留的有效逻辑连词（承担真实逻辑功能）：**
+- 递进：in addition, moreover, furthermore, besides
+- 转折：however, nevertheless, yet, although, though
+- 因果：therefore, thus, consequently, as a result, because, since
+- 对比：in contrast, conversely, on the other hand
+- 例证：for example, for instance, specifically
+
+**修正原则：**
+- 只删除那些用作填充、模板化开头或机械过渡的词语
+- 如果某个连词真实地连接了两个句子的逻辑关系，必须保留
+- 如果删除后逻辑关系变得模糊，应保留该连词或改用更自然的同义表达，而非直接删除
+- 句子间应通过自然的逻辑递进衔接，而非依赖模板化过渡词
 
 ---
 
