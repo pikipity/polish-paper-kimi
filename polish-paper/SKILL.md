@@ -147,7 +147,8 @@ description: |
    **详细规则请读取并遵循 `references/de-ai-rules.md`。** 核心检查要点如下：
 
    **必须删除的词与短语：**
-   - 机械连接词：First and foremost, It is worth noting that, In conclusion, Lastly, Interestingly, Let's dive in
+   - 机械连接词（不承担真实逻辑功能的模板化过渡词）：First and foremost, It is worth noting that, In conclusion, Lastly, Interestingly, Let's dive in
+   - 注意：in addition, moreover, furthermore, however, therefore, thus, consequently 等**承担真实逻辑功能**的连词应保留。只有在这些词被滥用、堆砌或不必要时才考虑删除或替换。
    - AI 高频词（避免堆砌）：additionally, crucial, delve, enhance, fostering, highlight, intricate, landscape, pivotal, showcase, tapestry, testament, underscore, vibrant
    - 意义夸大：stands as, serves as a testament, marking a pivotal moment, underscores its importance
    - 模糊归因：Experts argue, Industry reports, Some critics believe（必须引用具体文献 \cite{} 或删除）
