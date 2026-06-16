@@ -166,12 +166,19 @@ significant improvement without specifics → 拒绝空洞概括，保留或补�
 - Before: "The term is promoted by Dutch institutions—not by the people themselves."
 - After: "The term is promoted by Dutch institutions, not by the people themselves."
 
+**尽量回避冒号：**
+冒号（:）仅在引出公式、数学定义或必要解释时使用。一般情况下，用句号拆句或用逗号、从句替代冒号。
+- Before: "We focus on three aspects: efficiency, accuracy, and robustness."
+- After: "We focus on efficiency, accuracy, and robustness."
+- Before: "The result is clear: our method outperforms the baseline."
+- After: "Our method outperforms the baseline. This result is clear."
+
 **严禁列表化：**
 不要将段落改写为 item 列表或 bullet points。
 
 ---
 
-## 3.8 学术写作特别豁免（避免过度修正）
+## 3.9 学术写作特别豁免（避免过度修正）
 
 以下表达在 IEEE Transaction 中完全正常，**不要修改**：
 
